@@ -3,14 +3,13 @@ import { useState, useEffect } from "react";
 import { TypeAnimation } from "react-type-animation";
 import AOS from "aos";
 import "aos/dist/aos.css";
-import { Worker, Viewer } from "@react-pdf-viewer/core";
-import { defaultLayoutPlugin } from "@react-pdf-viewer/default-layout";
 import "@react-pdf-viewer/core/lib/styles/index.css";
 import "@react-pdf-viewer/default-layout/lib/styles/index.css";
+import dynamic from "next/dynamic";
 
 const Home = () => {
   const [showResume, setShowResume] = useState(false);
-  const defaultLayoutPluginInstance = defaultLayoutPlugin();
+  const PDFViewer = dynamic(() => import("./_components/PDFViewer"), { ssr: false });
   useEffect(() => {
     AOS.init();
   }, []);
@@ -235,12 +234,13 @@ const Home = () => {
 
             {/* Iframe PDF */}
             {/* <iframe src="/pdf/resume.pdf" className="w-full h-full" allow="autoplay" /> */}
-            <Worker workerUrl="https://unpkg.com/pdfjs-dist@3.11.174/build/pdf.worker.min.js">
+            {/* <Worker workerUrl="https://unpkg.com/pdfjs-dist@3.11.174/build/pdf.worker.min.js">
               <Viewer
                 fileUrl="/pdf/resume.pdf"
                 plugins={[defaultLayoutPluginInstance]}
               />
-            </Worker>
+            </Worker> */}
+            <PDFViewer/>
           </div>
         </div>
       )}
