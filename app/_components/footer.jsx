@@ -8,7 +8,7 @@ const Footer = () => {
                     <ul>
                         <li className="font-bold text-white text-[15px] mb-3"><a href="https://wa.me/6285655230897" title="klik untuk kirim pesan" target="_blank"><img src="/images/icons8-whatsapp-48.png" className="inline w-9 " alt="" /> 0856-5523-0897</a></li>
                         <li className="font-bold text-white text-[15px] mb-3"><a href="https://www.instagram.com/yossi_nordiansah" title="klik untuk lihat instagram" target="_blank"><img src="/images/icons8-instagram-48.png" className="inline w-9 " alt="" /> @yossi_n</a></li>
-                        <li className="font-bold text-white text-[15px] mb-3"><a href="https://web.facebook.com/yossi.nordiansah" title="klik untuk lihat facebook" target="_blank"><img src="/images/icons8-facebook-48.png" className="inline w-9 " alt="" /> Yossi Nordiansah</a></li>
+                        <li className="font-bold text-white text-[15px] mb-3"><a href="mailto:yossi.nordiansah99@gmail.com"><img src="/icons/gmail.svg" className="inline w-8 " alt="" /> yossi.nordiansah99@gmail.com</a></li>
                     </ul>   
                 </div>
                 <div>
@@ -20,7 +20,8 @@ const Footer = () => {
                 </div>
             </div>
         </div>
-        <div className="text-center text-white font-poppins font-bold"><img src="/icons/gmail.svg" className="inline w-8 " alt="" /> yossi.nordiansah99@gmail.com</div>
+        <div className="text-center text-white font-poppins font-bold">
+            </div>
     </footer>
     )
 }

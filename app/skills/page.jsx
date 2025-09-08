@@ -17,13 +17,13 @@ const skills = [
   {
     name: "JavaScript",
     image: "/icons/js.svg",
-    rating: 4,
+    rating: 3,
     description: "DOM manipulation, ES6+, asynchronous programming."
   },
   {
     name: "Tailwind CSS",
     image: "/icons/tailwind.svg",
-    rating: 5,
+    rating: 4,
     description: "Utility-first styling, responsive design, dark mode."
   },
   {
@@ -41,13 +41,13 @@ const skills = [
   {
     name: "Next.js",
     image: "/images/nextjs.png",
-    rating: 3,
+    rating: 4,
     description: "Server-side rendering, App Router, API routes, SEO support."
   },
   {
     name: "Node.js",
     image: "/images/nodejs.png",
-    rating: 4,
+    rating: 3,
     description: "Backend development, REST APIs, server-side logic."
   },
   {
@@ -62,7 +62,20 @@ const skills = [
     rating: 4,
     description: "Database design, CRUD operations, query optimization."
   },
+  {
+    name: "PHP",
+    image: "/icons/php.png", 
+    rating: 3,
+    description: "Server-side scripting, OOP, backend development."
+  },
+  {
+    name: "CodeIgniter",
+    image: "/icons/codeigniter.png", 
+    rating: 3,
+    description: "MVC framework, REST API, lightweight PHP development."
+  },
 ];
+
 
 const Skills = () => {
   return (
