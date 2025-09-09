@@ -51,6 +51,12 @@ const skills = [
     description: "Backend development, REST APIs, server-side logic."
   },
   {
+    name: "Express.js",
+    image: "/icons/express.svg",
+    rating: 3,
+    description: "Minimalist web framework for Node.js, REST APIs, middleware."
+  },
+  {
     name: "Git & GitHub",
     image: "/images/Git.png",
     rating: 4,
@@ -64,13 +70,13 @@ const skills = [
   },
   {
     name: "PHP",
-    image: "/icons/php.png", 
+    image: "/icons/php.png",
     rating: 3,
     description: "Server-side scripting, OOP, backend development."
   },
   {
     name: "CodeIgniter",
-    image: "/icons/codeigniter.png", 
+    image: "/icons/codeigniter.png",
     rating: 3,
     description: "MVC framework, REST API, lightweight PHP development."
   },
