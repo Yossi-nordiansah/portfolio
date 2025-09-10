@@ -45,7 +45,7 @@ const Project = () => {
             id: 1,
             title: 'Task Tracker',
             category: 'CRUD App',
-            description: 'A web app to-do list that is simplified with features for completion and deletion from the lis',
+            description: 'A web app to-do list that is simplified with features for completion and deletion from the list',
             repo: 'https://github.com/Yossi-nordiansah/task-tracker-App',
             page: 'https://loquacious-horse-45d5f2.netlify.app/',
             img: '/images/task-tracker.png'

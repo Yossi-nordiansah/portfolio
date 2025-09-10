@@ -64,17 +64,6 @@ const Home = () => {
             process.
           </p>
           <div className="flex gap-3 mt-7">
-            {/* <a
-              href={pdfURL}
-              target="_blank"
-              download="Yossi Nordiansah Resume"
-              className="flex items-center justify-center gap-2 px-3 py-3 border-2 border-yellow-400 border-dashed rounded-lg cursor-pointer hover:bg-stone-500 w-fit bg-white/30 sm:py-1"
-            >
-              <img src="/icons/view.svg" className="w-4 sm:w-6 " alt="" />
-              <p className="text-white md:text-sm sm:text-[12px] xs:text-[12px] xs:font-medium xs: text-[8px] text-center">
-                VIEW RESUME
-              </p>
-            </a> */}
             <button
               onClick={() => setShowResume(!showResume)}
               className="flex items-center justify-center gap-2 px-3 py-3 border-2 border-yellow-400 border-dashed rounded-lg cursor-pointer hover:bg-stone-500 w-fit bg-white/30 sm:py-1"
@@ -183,7 +172,7 @@ const Home = () => {
               </h1>
               <p className="font-semibold">Internship</p>
               <p className="font-semibold">8 April 2024 - 8 Mei 2024</p>
-              <p className="font-bold">Front End Developer</p>
+              <p className="font-bold">Fullstack Developer</p>
             </div>
           </div>
           <img src="/icons/work.svg" alt="" className="w-6 mt-4" />
@@ -231,15 +220,6 @@ const Home = () => {
             >
               ✕
             </button>
-
-            {/* Iframe PDF */}
-            {/* <iframe src="/pdf/resume.pdf" className="w-full h-full" allow="autoplay" /> */}
-            {/* <Worker workerUrl="https://unpkg.com/pdfjs-dist@3.11.174/build/pdf.worker.min.js">
-              <Viewer
-                fileUrl="/pdf/resume.pdf"
-                plugins={[defaultLayoutPluginInstance]}
-              />
-            </Worker> */}
             <PDFViewer/>
           </div>
         </div>
