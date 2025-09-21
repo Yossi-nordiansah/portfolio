@@ -69,6 +69,12 @@ const skills = [
     description: "Database design, CRUD operations, query optimization."
   },
   {
+    name: "PostgreSQL",
+    image: "/icons/postgresql.png",
+    rating: 4,
+    description: "Relational database, advanced queries, JSON support, scalability."
+  },
+  {
     name: "PHP",
     image: "/icons/php.png",
     rating: 3,
@@ -80,7 +86,14 @@ const skills = [
     rating: 3,
     description: "MVC framework, REST API, lightweight PHP development."
   },
+  {
+    name: "Laravel",
+    image: "/icons/laravel.png",
+    rating: 4,
+    description: "Modern PHP framework, Eloquent ORM, Blade templating, REST API."
+  },
 ];
+
 
 
 const Skills = () => {
