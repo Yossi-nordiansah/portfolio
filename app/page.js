@@ -51,17 +51,7 @@ const Home = () => {
             data-aos-delay="300"
             data-aos-once="true"
           >
-            Hello, My name is{" "}
-            <span className="text-blue-400 font-poppins">Yossi Nordiansah</span>
-            , I am a Fullstack Web Developer specializing in JavaScript and PHP.
-            My main expertise lies in using React.js to build responsive,
-            interactive, user-friendly, modular, and efficient UI components, as
-            well as Tailwind CSS to accelerate the styling process with a modern
-            utility-first approach. I am experienced in collaborative work using
-            Git and GitHub, both for managing code versions effectively and for
-            teamwork through pull requests, code reviews, issue tracking, and
-            leveraging Artificial Intelligence to speed up the development
-            process.
+            Fullstack Web Developer with experience in JavaScript and PHP-based web development. Strong focus on frontend development using React.js/Next.js to build responsive, modular, and user-friendly interfaces, supported by Tailwind CSS for efficient styling. Experienced in backend development, database integration, and collaborative workflows using Git and GitHub.
           </p>
           <div className="flex gap-3 mt-7">
             <button

@@ -35,11 +35,10 @@ const Navbar = () => {
           <li key={item.id}>
             <Link
               href={item.path}
-              className={`${
-                pathname === item.path
+              className={`${pathname === item.path
                   ? "text-blue-400 drop-shadow-[0_0px_15px_#0073e6]"
                   : "hover:text-blue-400"
-              }`}
+                }`}
               title={item.name}
             >
               {item.name}
@@ -68,18 +67,16 @@ const Navbar = () => {
             )}
           </div>
           <div
-            className={`flex flex-col w-32 duration-300 mt-6 font-bold text-white rounded-l-md bg-blue-600 absolute right-0 ${
-              showMenu ? "translate-x-0" : "translate-x-32"
-            }`}
+            className={`flex flex-col w-32 duration-300 mt-6 font-bold text-white rounded-l-md bg-blue-600 absolute right-0 ${showMenu ? "translate-x-0" : "translate-x-32"
+              }`}
           >
             {navbarMenu.map((item) => (
               <Link
                 key={item.id}
                 href={item.path}
                 onClick={() => setShowMenu(false)}
-                className={`text-center py-4 px-10 hover:bg-blue-800 ${
-                  pathname === item.path ? "bg-blue-800" : ""
-                }`}
+                className={`text-center py-4 px-10 hover:bg-blue-800 ${pathname === item.path ? "bg-blue-800" : ""
+                  }`}
               >
                 {item.name}
               </Link>

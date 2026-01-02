@@ -1,3 +1,4 @@
+"use client";
 import PDFViewer from "@/app/_components/PDFViewer";
 export default function Natusi() {
     return (
