@@ -219,7 +219,7 @@ const Home = () => {
             >
               ✕
             </button>
-            <PDFViewer/>
+            <PDFViewer url="/pdf/resume.pdf" />
           </div>
         </div>
       )}
