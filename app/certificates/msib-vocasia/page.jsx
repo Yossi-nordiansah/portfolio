@@ -5,7 +5,7 @@ export default function Certificate() {
         <div style={{ backgroundImage: 'url("/images/bg.jpg")' }} className="min-h-screen w-full bg-cover bg-no-repeat relative z-50">
             <div className="flex items-center justify-center min-h-screen">
                 <div className="relative w-[95%] md:w-4/5 h-[90%] bg-white rounded-lg overflow-hidden shadow-lg">
-                    <PDFViewer url="/pdf/sertifikat studi independen front end web developer (1).pdf" height="90vh" />
+                    <PDFViewer url="/pdf/sertifikat-studi-independen-frontend-vocasia.pdf" height="90vh" />
                 </div>
             </div>
         </div>
