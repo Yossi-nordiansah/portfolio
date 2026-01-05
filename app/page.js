@@ -14,202 +14,206 @@ const Home = () => {
     AOS.init();
   }, []);
 
-  const pdfURL =
-    "https://drive.google.com/file/d/1SQ4euqAuE8GFtCCG0RbzvWedFx824D6f/view?usp=sharing";
   const [showContact, setShowContact] = useState(false);
-  return (
-    <main className="w-full min-w-full sm:pt-24 xs:pt-20 pt-16 bg-gradient-to-b grid grid-rows-[auto_auto_auto_auto_30px_auto] gap-y-3 from-blue-950 to-blue-800">
-      <div className="relative">
-        <TypeAnimation
-          sequence={[
-            "Hallo...",
-            1000,
-            "Wellcome To My Portfolio",
-            1000,
-            "My Name is Yossi Nordiansah",
-            1000,
-            "I am a Fullstack Web Developer",
-            1000,
-          ]}
-          wrapper="h1"
-          speed={50}
-          cursor={false}
-          repeat={0}
-          className="absolute font-radjdhani_bold lg:text-5xl sm:text-4xl sm:text-left xs:text-[22px] xs:leading-[28px] text-[18px] xl:pl-32 lg:pl-14 md:pl-10 sm:pl-8 xs:pl-5 pl-5  text-sky-400 tracking-wider font-bold drop-shadow-[0_0px_15px_#0066ff]"
-        />
-      </div>
 
-      {/* <!-- intro --> */}
-      <div
-        className="xl:w-4/5 lg:w-[90%] mx-auto lg:mt-16 sm:mt-14  xs:mt-14 mt-10 flex lg:flex-row flex-col-reverse justify-between items-center "
-        id="about"
-      >
-        <div className="lg:w-8/12 w-[90%] overflow-x-hidden">
-          <p
-            className="overflow-x-hidden text-sm text-justify font-inter sm:text-xl xs:text-lg lg:w-full md:w-full sm:font-semibold xs:font-medium sm:first-letter:text-6xl xs:first-letter:text-4xl xxs:first-letter:text-2xl text-slate-200"
-            data-aos="fade-right"
-            data-aos-delay="300"
-            data-aos-once="true"
+  return (
+    <main className="w-full min-h-screen bg-gradient-to-br from-slate-900 via-blue-950 to-slate-900 overflow-x-hidden">
+      {/* Hero Section */}
+      <div className="relative w-full min-h-screen flex flex-col justify-center items-center pt-20 pb-10 px-4 md:px-10">
+        
+        {/* Background Accents */}
+        <div className="absolute top-20 left-10 w-72 h-72 bg-blue-500/20 rounded-full blur-[100px] animate-pulse"></div>
+        <div className="absolute bottom-20 right-10 w-96 h-96 bg-cyan-500/10 rounded-full blur-[120px] animate-pulse delay-1000"></div>
+
+        <div className="relative z-10 text-center max-w-4xl mx-auto space-y-6">
+          <div 
+            className="inline-block px-4 py-2 rounded-full bg-white/5 border border-white/10 backdrop-blur-sm mb-4"
+            data-aos="fade-down"
           >
-            Fullstack Web Developer with experience in JavaScript and PHP-based web development. Strong focus on frontend development using React.js/Next.js to build responsive, modular, and user-friendly interfaces, supported by Tailwind CSS for efficient styling. Experienced in backend development, database integration, and collaborative workflows using Git and GitHub.
-          </p>
-          <div className="flex gap-3 mt-7">
-            <button
-              onClick={() => setShowResume(!showResume)}
-              className="flex items-center justify-center gap-2 px-3 py-3 border-2 border-yellow-400 border-dashed rounded-lg cursor-pointer hover:bg-stone-500 w-fit bg-white/30 sm:py-1"
+            <span className="text-cyan-400 font-medium tracking-wide">Welcome to my portfolio</span>
+          </div>
+          
+          <h1 className="text-5xl md:text-7xl font-bold font-poppins text-white tracking-tight" data-aos="zoom-in" data-aos-delay="100">
+            Hi, I'm <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-600">Yossi Nordiansah</span>
+          </h1>
+
+          <div className="h-20 md:h-24 flex items-center justify-center">
+             <TypeAnimation
+              sequence={[
+                "Fullstack Web Developer",
+                2000,
+                "React.js & Next.js Enthusiast",
+                2000,
+                "Backend Developer (Node/PHP)",
+                2000,
+              ]}
+              wrapper="h2"
+              speed={50}
+              className="text-2xl md:text-4xl font-light text-slate-300 font-inter"
+              repeat={Infinity}
+            />
+          </div>
+
+          <div className="flex flex-col md:flex-row gap-4 justify-center mt-8" data-aos="fade-up" data-aos-delay="300">
+             <button
+              onClick={() => document.getElementById('about').scrollIntoView({ behavior: 'smooth' })}
+              className="px-8 py-3 rounded-full bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold hover:shadow-[0_0_20px_rgba(6,182,212,0.5)] transition-all duration-300 transform hover:-translate-y-1"
             >
-              <img src="/icons/view.svg" className="w-4 sm:w-6 " alt="" />
-              <p className="text-white md:text-sm sm:text-[12px] xs:text-[12px] xs:font-medium text-center">
-                {showResume ? "CLOSE RESUME" : "VIEW RESUME"}
-              </p>
+              Explore My Work
+            </button>
+             <button
+              onClick={() => setShowResume(true)}
+              className="px-8 py-3 rounded-full bg-white/5 border border-white/20 text-white font-semibold hover:bg-white/10 backdrop-blur-md transition-all duration-300 group"
+            >
+              View Resume <span className="inline-block transition-transform group-hover:translate-x-1">→</span>
             </button>
           </div>
         </div>
-        <div
-          className="border-8 border-blue-300 overflow-hidden overflow-x-hidden rounded-full drop-shadow-[0_0px_15px_#0066ff] sm:h-72 sm:w-72 w-56 h-56"
-          data-aos="fade-left"
-          data-aos-delay="300"
-          data-aos-once="true"
-        >
-          <img
-            className="mx-auto xs:w-60 drop-shadow-none"
-            src="/images/img.png"
-            alt=""
-          />
+      </div>
+
+      {/* About Section */}
+      <div id="about" className="relative py-0 md:py-20 px-6 md:px-12 max-w-7xl mx-auto">
+         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            
+            <div className="relative order-2 lg:order-1" data-aos="fade-right">
+               <div className="absolute inset-0 bg-gradient-to-r from-blue-600 to-cyan-400 rounded-3xl blur-2xl opacity-20 transform rotate-3"></div>
+               <div className="relative bg-white/5 backdrop-blur-xl border border-white/10 p-3 md:p-10 rounded-3xl shadow-2xl">
+                  <h3 className="text-2xl font-bold text-white mb-6 font-poppins flex items-center gap-3">
+                    <span className="w-10 h-1 bg-cyan-500 rounded-full"></span> About Me
+                  </h3>
+                  <p className="text-slate-300 text-lg leading-relaxed font-inter text-justify">
+                    Fullstack Web Developer with experience in JavaScript and PHP-based web development. Strong focus on 
+                    <span className="text-cyan-400 font-semibold"> Frontend development</span> using React.js/Next.js to build responsive, modular, and user-friendly interfaces, supported by Tailwind CSS for efficient styling. Experienced in 
+                    <span className="text-blue-400 font-semibold"> Backend development</span>, database integration, and collaborative workflows using Git and GitHub.
+                  </p>
+               </div>
+            </div>
+
+            <div className="relative order-1 lg:order-2 flex justify-center" data-aos="fade-left">
+              <div className="relative w-72 h-72 md:w-96 md:h-96">
+                <div className="absolute inset-0 border-2 border-cyan-500/30 rounded-full animate-[spin_10s_linear_infinite]"></div>
+                <div className="absolute inset-4 border-2 border-blue-500/30 rounded-full animate-[spin_15s_linear_infinite_reverse]"></div>
+                <div className="absolute inset-8 rounded-full overflow-hidden shadow-[0_0_30px_rgba(6,182,212,0.3)] border-4 border-slate-800">
+                  <img src="/images/img.png" alt="Profile" className="" />
+                </div>
+              </div>
+            </div>
+
+         </div>
+      </div>
+
+      {/* Education Section */}
+      <div id="education" className="py-20 px-6 md:px-12 max-w-6xl mx-auto">
+        <h2 className="text-3xl md:text-4xl font-bold text-center text-white mb-16 font-poppins" data-aos="fade-up">
+           <span className="border-b-4 border-blue-500 pb-2 text-nowrap">Education Journey</span>
+        </h2>
+        
+        <div className="relative space-y-8 before:absolute before:inset-0 before:ml-5 before:-translate-x-px md:before:mx-auto md:before:translate-x-0 before:h-full before:w-0.5 before:bg-gradient-to-b before:from-transparent before:via-slate-300 before:to-transparent">
+
+          {/* Education Item 2 */}
+          <div className="relative flex items-center justify-between md:justify-normal md:odd:flex-row-reverse group is-active">
+            <div className="flex items-center justify-center w-10 h-10 rounded-full border border-white bg-slate-900 shrink-0 md:order-1 md:group-odd:-translate-x-1/2 md:group-even:translate-x-1/2 shadow shadow-blue-500/50 relative z-10">
+               <img src="/icons/education-cap-svgrepo-com.svg" className="w-5 h-5" alt="" />
+            </div>
+            <div className="w-[calc(100%-4rem)] md:w-[calc(50%-2.5rem)] p-2 md:p-5 rounded-2xl bg-white/5 border border-white/10 backdrop-blur-sm shadow-xl hover:bg-white/10 transition-all duration-300" data-aos="fade-left">
+               <div className="flex flex-col xs:flex-row justify-between items-start xs:items-center mb-2">
+                 <h3 className="text-xl font-bold text-cyan-400">Universitas Islam Majapahit</h3>
+                 <span className="text-xs font-mono py-1 px-2 rounded bg-blue-900/50 text-blue-200 mt-1 xs:mt-0 text-nowrap">2021 - 2025</span>
+               </div>
+               <p className="text-white font-medium mb-1">Informatics Engineering</p>
+               <p className="text-slate-400 text-sm">Bachelor Degree</p>
+            </div>
+          </div>
+
+          {/* Education Item 3 */}
+          <div className="relative flex items-center justify-between md:justify-normal md:odd:flex-row-reverse group is-active">
+            <div className="flex items-center justify-center w-10 h-10 rounded-full border border-white bg-slate-900 shrink-0 md:order-1 md:group-odd:-translate-x-1/2 md:group-even:translate-x-1/2 shadow shadow-blue-500/50 relative z-10">
+               <img src="/icons/education-cap-svgrepo-com.svg" className="w-5 h-5" alt="" />
+            </div>
+            <div className="w-[calc(100%-4rem)] md:w-[calc(50%-2.5rem)] p-2 md:p-5 rounded-2xl bg-white/5 border border-white/10 backdrop-blur-sm shadow-xl hover:bg-white/10 transition-all duration-300" data-aos="fade-right">
+               <div className="flex flex-col xs:flex-row justify-between items-start xs:items-center mb-2">
+                 <h3 className="text-xl font-bold text-cyan-400">SMAN 1 Kutorejo</h3>
+                 <span className="text-xs font-mono py-1 px-2 rounded bg-blue-900/50 text-blue-200 mt-1 xs:mt-0">2015 - 2018</span>
+               </div>
+               <p className="text-white font-medium mb-1">Science Major</p>
+            </div>
+          </div>
+
         </div>
       </div>
 
-      {/* <!-- Education --> */}
-      <div
-        className="xl:w-4/5 w-[90%] xl:mt-24 mt-20 m-auto justify-between mobile-sm:flex-col laptop:flex-row items-center"
-        id="education"
-      >
-        <h1 className="text-4xl font-bold text-left text-blue-300 font-poppins">
-          Education
-        </h1>
-        <div
-          className="mt-10 lg:pl-6"
-          data-aos="fade-up"
-          data-aos-delay="200"
-          data-aos-once="true"
-        >
-          <img src="/icons/course.svg" alt="" className="w-6" />
-          <div className="mt-2 ml-3 leading-5 border-l-2 border-white xs:h-20 h-28">
-            <div className="relative flex flex-col gap-2 ml-10 text-white lg:gap-3 -top-9">
-              <h1 className="font-bold lg:text-2xl sm:text-xl xs:text-base">
-                Yayasan Adipurna Inovasi Asia &#40;Kampus Merdeka Program&#41;
-              </h1>
-              <p className="text-sm sm:text-base">
-                August 2023 - December 2023
-              </p>
-              <p className="text-sm font-bold xs:text-base">
-                Front End Web Developer
-              </p>
-            </div>
-          </div>
-          <img
-            src="/icons/education-cap-svgrepo-com.svg"
-            alt=""
-            className="w-6 mt-4"
-          />
-          <div className="h-20 mt-2 ml-3 border-l-2 border-white xs:h-16">
-            <div className="relative flex flex-col gap-2 ml-10 text-white lg:gap-3 -top-9">
-              <h1 className="text-xl font-bold leading-6 lg:text-2xl">
-                Universitas Islam Majapahit
-              </h1>
-              <p className="text-sm sm:text-base">2021 - 2025</p>
-              <p className="text-sm font-bold xs:text-base">
-                Informatics Engineering
-              </p>
-            </div>
-          </div>
-          <img
-            src="/icons/education-cap-svgrepo-com.svg"
-            alt=""
-            className="w-6 mt-4"
-          />
-          <div className="h-16 mt-2 ml-3 border-l-2 border-white">
-            <div className="relative flex flex-col gap-2 ml-10 text-white lg:gap-3 -top-9">
-              <h1 className="text-xl font-bold leading-6 lg:text-2xl">
-                SMAN 1 Kutorejo
-              </h1>
-              <p className="text-sm sm:text-base">2015 - 2018</p>
-              <p className="text-sm font-bold xs:text-base">Majoring Science</p>
-            </div>
-          </div>
+       {/* Experience Section */}
+      <div id="experience" className="py-20 px-6 md:px-12 max-w-7xl mx-auto bg-slate-900/30">
+        <h2 className="text-3xl md:text-4xl font-bold text-center text-white mb-16 font-poppins" data-aos="fade-up">
+           <span className="border-b-4 border-cyan-500 pb-2">Work Experience</span>
+        </h2>
+
+        <div className="flex flex-col md:flex-row justify-center gap-8 flex-wrap">
+
+         <div className="group relative p-1 rounded-2xl bg-gradient-to-b from-cyan-500 to-blue-600 hover:from-cyan-400 hover:to-blue-500 transition-all duration-300 w-full md:w-[calc(50%-1rem)] max-w-md" data-aos="flip-left" data-aos-delay="0">
+              <div className="bg-slate-900 h-full rounded-xl p-6 relative overflow-hidden group-hover:bg-slate-800 transition-colors">
+                 <div className="absolute top-0 right-0 p-4 opacity-10 group-hover:opacity-20 transition-opacity">
+                    <img src="/icons/work.svg" className="w-20 h-20 invert" alt="" />
+                 </div>
+                 <h3 className="text-2xl font-bold text-white mb-1">PT AZlogistik Dot Com</h3>
+                 <p className="text-cyan-400 font-semibold mb-4">Fulltime Job (Project Based) Operator AI (Frontend Development)</p>
+                 <div className="flex items-center gap-2 text-slate-400 text-sm mb-4">
+                    <span>📅</span> October 2025 – December 2025
+                 </div>
+                 <p className="text-slate-300 text-sm">●	Developed reusable and maintainable UI components to support scalable application interfaces.<br></br>
+●	Implemented REST API integration between frontend and backend services.
+</p>
+              </div>
+           </div>
+           
+           {/* Experience Card 2 */}
+           <div className="group relative p-1 rounded-2xl bg-gradient-to-b from-blue-600 to-indigo-600 hover:from-blue-500 hover:to-indigo-500 transition-all duration-300 w-full md:w-[calc(50%-1rem)] max-w-md" data-aos="flip-left" data-aos-delay="100">
+              <div className="bg-slate-900 h-full rounded-xl p-6 relative overflow-hidden group-hover:bg-slate-800 transition-colors">
+                 <div className="absolute top-0 right-0 p-4 opacity-10 group-hover:opacity-20 transition-opacity">
+                    <img src="/icons/work.svg" className="w-20 h-20 invert" alt="" />
+                 </div>
+                 <h3 className="text-2xl font-bold text-white mb-1">CV Natusi</h3>
+                 <p className="text-blue-400 font-semibold mb-4">Internship • Fullstack Developer</p>
+                 <div className="flex items-center gap-2 text-slate-400 text-sm mb-4">
+                    <span>📅</span>April 2024 - May 2024
+                 </div>
+                 <p className="text-slate-300 text-sm">●	Translated Figma designs into fully responsive and user-friendly web interfaces.<br></br>
+●	Integrated applications with relational databases for efficient data management.
+</p>
+              </div>
+           </div>
         </div>
       </div>
 
-      {/* <!-- Work Experience --> */}
-      <div
-        className="xl:w-4/5 w-[90%] mt-20 mx-auto justify-between relative overflow-y-hidden pb-3"
-        id="education"
-      >
-        <h1 className="pl-0 text-3xl font-bold text-left text-blue-300 font-poppins xs:text-4xl">
-          Work Experience
-        </h1>
-        <div
-          className="mt-10 lg:pl-6"
-          data-aos="fade-up"
-          data-aos-delay="200"
-          data-aos-once="true"
+      {/* Floating Buttons */}
+      <div className="fixed right-6 bottom-9 flex flex-col gap-4 z-40" data-aos="fade-left">
+        <a 
+          target="_blank" 
+          href="https://wa.me/6285655230897"
+          className="group relative flex items-center justify-center w-14 h-14 bg-green-500 rounded-full shadow-lg hover:shadow-green-500/50 hover:bg-green-400 transition-all duration-300"
+          title="Chat on WhatsApp"
         >
-          <img src="/icons/work.svg" alt="" className="w-6" />
-          <div className="mt-2 ml-3 border-l-2 border-white h-26 ">
-            <div className="relative flex flex-col gap-4 ml-10 text-white -top-9">
-              <h1 className="text-xl font-bold leading-6 lg:text-2xl">
-                CV Natusi
-              </h1>
-              <p className="font-semibold">Internship</p>
-              <p className="font-semibold">8 April 2024 - 8 Mei 2024</p>
-              <p className="font-bold">Fullstack Developer</p>
-            </div>
-          </div>
-          <img src="/icons/work.svg" alt="" className="w-6 mt-4" />
-          <div className="mt-4 ml-3 border-l-2 border-white h-26">
-            <div className="relative flex flex-col gap-4 ml-10 text-white -top-9">
-              <h1 className="text-xl font-bold leading-6 lg:text-2xl">
-                PT Wezzo Sukses Mandiri
-              </h1>
-              <p className="font-semibold">Full Time Job</p>
-              <p className="font-semibold">2021</p>
-              <p className="font-bold">Cleaning Service</p>
-            </div>
-          </div>
-          <img src="/icons/work.svg" alt="" className="w-6 mt-4" />
-          <div className="h-24 mt-2 ml-3 border-l-2 border-white">
-            <div className="relative flex flex-col gap-3 ml-10 text-white -top-9">
-              <h1 className="text-xl font-bold leading-6 lg:text-2xl">
-                PT Prada Karya Perkasa
-              </h1>
-              <p className="font-semibold">Full Time Job</p>
-              <p className="font-semibold">2020</p>
-              <p className="font-bold">Helper Thermo</p>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div
-        className="fixed right-6 bottom-9 animate-bounce"
-        title="click to contact me"
-        data-aos="fade-down"
-        data-aos-delay="200"
-        data-aos-once="true"
-      >
-        <a target="_blank" href="https://wa.me/6285655230897">
-          <img src="/images/icons8-whatsapp-48.png" alt="" />
+          <div className="absolute inset-0 rounded-full border-2 border-green-400 opacity-0 group-hover:opacity-100 group-hover:scale-125 transition-all duration-500"></div>
+          <img src="/images/icons8-whatsapp-48.png" alt="WhatsApp" className="w-8 h-8 brightness-0 invert" />
         </a>
       </div>
+
+      {/* Resume Modal */}
       {showResume && (
-        <div className="fixed inset-0 bg-black/70 flex items-center justify-center z-50">
-          <div className="relative w-[95%] md:w-4/5 h-[80%] bg-white rounded-lg overflow-hidden shadow-lg">
-            <button
-              onClick={() => setShowResume(false)}
-              className="absolute top-10 right-0 z-50 bg-red-500 text-white px-3 py-1 rounded-lg hover:bg-red-600 transition"
-            >
-              ✕
-            </button>
-            <PDFViewer url="/pdf/resume.pdf" />
+        <div className="fixed inset-0 bg-black/80 backdrop-blur-md flex items-center justify-center z-[201] p-4 animate-in fade-in duration-300">
+          <div className="relative w-full max-w-5xl h-[85vh] bg-slate-900 rounded-2xl overflow-hidden shadow-2xl border border-white/10">
+            <div className="absolute top-0 left-0 right-0 h-14 bg-slate-800 flex items-center justify-between px-6 border-b border-white/10 z-10">
+               <h3 className="text-white font-semibold">Resume Preview</h3>
+               <button
+                onClick={() => setShowResume(false)}
+                className="text-slate-400 hover:text-white transition-colors"
+               >
+                 ✕ Close
+               </button>
+            </div>
+            <div className="pt-14 bg-slate-800/50">
+               <PDFViewer url="/pdf/resume.pdf" />
+            </div>
           </div>
         </div>
       )}

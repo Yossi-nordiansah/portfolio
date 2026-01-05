@@ -26,7 +26,7 @@ const Navbar = () => {
   }, []);
 
   return (
-    <nav className="sm:px-10 px-5 bg-blue-800/5 w-full md:h-16 h-14 fixed flex justify-between items-center backdrop-blur-md z-10">
+    <nav className="sm:px-10 px-5 bg-blue-800/5 w-full md:h-16 h-14 fixed flex justify-between items-center backdrop-blur-md z-[200]">
       <img src="/images/logo4.png" className="xs:w-44 w-32" alt="Logo" />
 
       {/* Desktop menu */}

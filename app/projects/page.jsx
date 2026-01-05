@@ -45,7 +45,7 @@ const Project = () => {
             id: 1,
             title: 'Task Tracker',
             category: 'CRUD App',
-            description: 'A web app to-do list that is simplified with features for completion and deletion from the list',
+            description: 'The Task Tracker App is a streamlined web application built with React.js designed to help users manage daily activities through features like task creation, deletion, and reminder toggling. It utilizes a component-based architecture and React Hooks (useState, useEffect) for dynamic state management, paired with JSON Server as a mock backend to simulate RESTful API interactions for data persistence',
             repo: 'https://github.com/Yossi-nordiansah/task-tracker-App',
             page: 'https://loquacious-horse-45d5f2.netlify.app/',
             img: '/images/task-tracker.png'
@@ -54,7 +54,7 @@ const Project = () => {
             id: 2,
             title: 'Books App',
             category: 'CRUD App',
-            description: 'A web app that is useful for storing book data, featuring Create, Read, Update, and Delete functionalities.',
+            description: "The Books App is a modern web-based library management system built using the React.js library. For its styling, the project utilizes Tailwind CSS, ensuring a highly responsive and utility-first design approach. It leverages React's core features such as Hooks (useState, useEffect) for efficient state management and data persistence, likely integrated with LocalStorage or an external API to manage the book collection dynamically",
             repo: 'https://github.com/Yossi-nordiansah/task-tracker-App',
             page: 'https://yossi-nordiansah.github.io/books-app//',
             img: "/images/books-app.png"
@@ -63,7 +63,7 @@ const Project = () => {
             id: 3,
             title: 'Password Generator',
             category: 'Generate App',
-            description: 'A web app that functions to generate a random password based on the username you input.',
+            description: "The Password Generator is a functional utility application developed with React.js and styled using Tailwind CSS. This combination allows for a clean, modern interface with customized UI components. The application utilizes React's State Management to handle user preferences—such as password length and character complexity—generating secure, random strings instantly on the client side with a focus on performance and clean code",
             repo: 'https://github.com/Yossi-nordiansah/password-generator',
             page: 'https://yossi-nordiansah.github.io/password-generator/',
             img: "/images/password-generator.png"
@@ -72,7 +72,7 @@ const Project = () => {
             id: 4,
             title: 'Calculator',
             category: 'Calculator',
-            description: 'A simple calculator App',
+            description: "The Calculator is a re-imagined digital arithmetic tool built on the React.js framework. By using Tailwind CSS for its layout, the app achieves a sleek and responsive design that works across various screen sizes. The logic is handled through a component-based architecture, where React's Event Handling and State are used to process mathematical operations in real-time, providing a seamless and interactive user experience",
             repo: 'https://github.com/Yossi-nordiansah/kalkulator',
             page: 'https://yossi-nordiansah.github.io/kalkulator/',
             img: "/images/calculator.png"
@@ -81,7 +81,7 @@ const Project = () => {
             id: 5,
             title: 'Dapur Minang',
             category: 'Restaurant Landing Page',
-            description: 'This is a landing page for the "Dapur Minang" restaurant website, equipped with simple and attractive animations. Additionally, this landing page is also equipped with a dark mode to better suit users.',
+            description: "The dapur-minang project is a culinary catalog platform developed using React.js to showcase Minangkabau's culinary heritage through a dynamic and modular interface. By leveraging component-based architecture, the application offers optimal performance and reactive data management, making it a modern and efficient web application for users",
             repo: 'https://github.com/Yossi-nordiansah/dapur-minang',
             page: 'https://yossi-nordiansah.github.io/dapur-minang/',
             img: "/images/dapurMinang.png"
@@ -90,7 +90,7 @@ const Project = () => {
             id: 6,
             title: 'Netflix Clone',
             category: 'Landing Page',
-            description: 'A cloning of the Netflix landing page.',
+            description: 'The netplix project is a movie catalog application built with React.js and styled using Tailwind CSS to create a modern, responsive user interface. Unlike applications that rely on external APIs, this project focuses on managing local data efficiently to display movie lists, emphasizing precise UI design and clean component-based architecture',
             repo: 'https://github.com/Yossi-nordiansah/netplix',
             page: 'https://yossi-nordiansah.github.io/netplix/',
             img: "/images/netflix.png"
@@ -99,7 +99,7 @@ const Project = () => {
             id: 7,
             title: 'YN Movie',
             category: 'Information System',
-            description: 'A web app that functions to search for movie information using the API from omdb.com.',
+            description: 'The yn_movie project is a dynamic movie search application developed using React.js and Tailwind CSS. By integrating the OMDb API via Axios, the app allows users to search for and display movie information in real-time. The use of the Lucide React library and React Hooks ensures the interface remains interactive, lightweight, and responsive across various devices',
             repo: 'https://github.com/Yossi-nordiansah/yn_movie',
             page: 'https://yossi-nordiansah.github.io/yn_movie/',
             img: "/images/ynmovie.png"
@@ -108,7 +108,7 @@ const Project = () => {
             id: 8,
             title: 'MetaVFest Prototype',
             category: 'Landing Page',
-            description: 'A prototype landing page for ticket booking of an event.',
+            description: 'The metavfest_prototypenew project is a festival management prototype application built with React.js, offering an immersive and modern user interface. Developed with Tailwind CSS for responsive design and the AOS library for dynamic scroll animations, the project provides an engaging visual experience. The integration of Lucide React ensures design consistency, while its component-based architecture allows for efficient management of the event registration flow',
             repo: 'https://github.com/Yossi-nordiansah/metavfest_prototypenew.git',
             page: 'https://metavfest-prototypenew.vercel.app/',
             img: "/images/metavfest.png"
@@ -122,12 +122,17 @@ const Project = () => {
                 <Slider {...settings}>
                     {projects.map((project, index) => (
                         <div key={index} className="px-3 py-2 h-full">
-                            <div className="bg-[#0e1b34] border-2 transition-all duration-200 border-white rounded-lg shadow-lg overflow-hidden flex flex-col h-full justify-between min-h-96">
+                            <div className="group bg-[#0e1b34] border-2 transition-all duration-200 border-white rounded-lg shadow-lg overflow-hidden flex flex-col h-full justify-between min-h-96">
                                 <img src={project.img} alt={project.name} className="h-56 w-full object-cover mb-2" />
                                 <div className='px-3'>
                                     <h1 className='text-white xl:text-2xl lg:text-[20px] xs:text-xl font-poppins font-bold underline mb-1 '>{project.title}</h1>
                                     <p className='font-semibold text-white font-inter'>{project.category}</p>
-                                    <p className='max-w-full mt-1 mb-2 text-white transition-all duration-200 font-inter line-clamp-1 hover:line-clamp-none '>{project.description}</p>
+                                    <div className="relative mt-1 mb-2 overflow-hidden transition-[max-height] duration-500 ease-in-out max-h-20 group-hover:max-h-[500px]">
+                                         <p className='text-white font-inter text-justify pr-2'>
+                                            {project.description}
+                                        </p>
+                                        <div className="absolute bottom-0 left-0 w-full h-8 bg-gradient-to-t from-[#0e1b34] to-transparent group-hover:opacity-0 transition-opacity duration-300 pointer-events-none"></div>
+                                    </div>
                                 </div>
                                 <div className='flex gap-3 px-4 mb-2'>
                                     <a href={project.repo} target='_blank'>
