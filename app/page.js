@@ -41,7 +41,7 @@ const Home = () => {
             data-aos="zoom-in"
             data-aos-delay="100"
           >
-            Hi, I'm{" "}
+            {"Hi, I'm "}
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-600">
               Yossi Nordiansah
             </span>
