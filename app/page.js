@@ -320,7 +320,7 @@ const Home = () => {
               </button>
             </div>
             <div className="pt-14 bg-slate-800/50">
-              <PDFViewer url="/pdf/resume.pdf" />
+              <PDFViewer url="/pdf/noserver.pdf" />
             </div>
           </div>
         </div>
